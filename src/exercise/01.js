@@ -1,17 +1,14 @@
 // useState: greeting
+// 💯 accept an initialName
 // http://localhost:3000/isolated/exercise/01.js
 
 import * as React from 'react'
 
 function Greeting({initialName = ''}) {
-  // 💣 delete this variable declaration and replace it with a React.useState call
   const [name, setName] = React.useState(initialName)
-
   function handleChange(event) {
     setName(event.target.value)
-    // 🐨 update the name here based on event.target.value
   }
-
   return (
     <div>
       <form>
@@ -24,7 +21,7 @@ function Greeting({initialName = ''}) {
 }
 
 function App() {
-  return <Greeting initialName="Hugo" />
+  return <Greeting initialName="Kody" />
 }
 
 export default App
